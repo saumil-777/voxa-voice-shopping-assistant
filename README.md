@@ -318,9 +318,21 @@ This repository has been verified to build successfully in the current environme
 
 ---
 
+
 ## Deployment
 
-Deployment is intended for static hosting (Vercel, Netlify, GitHub Pages). `vercel.json` is included to support SPA routing; follow Vercel's Vite preset and use the `dist` directory produced by the build.
+VOXA is deployed using Firebase Hosting.
+
+### Production
+
+- Build command: `npm run build`
+- Output directory: `dist`
+- Hosting platform: Firebase Hosting
+- SPA routing: Enabled through Firebase rewrite configuration
+
+### Live Demo
+
+https://voxa-shopping-assistant.web.app
 
 ---
 
