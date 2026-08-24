@@ -1,0 +1,22 @@
+[
+  { "id": "ph-1",  "name": "bread",          "category": "bakery",     "lastPurchasedDaysAgo": 10, "purchaseIntervalDays": 7,  "typicalQuantity": 1, "unit": "loaf" },
+  { "id": "ph-2",  "name": "milk",           "category": "dairy",      "lastPurchasedDaysAgo": 8,  "purchaseIntervalDays": 7,  "typicalQuantity": 1, "unit": "packet" },
+  { "id": "ph-3",  "name": "eggs",           "category": "dairy",      "lastPurchasedDaysAgo": 9,  "purchaseIntervalDays": 7,  "typicalQuantity": 12, "unit": "pack" },
+  { "id": "ph-4",  "name": "bananas",        "category": "produce",    "lastPurchasedDaysAgo": 6,  "purchaseIntervalDays": 5,  "typicalQuantity": 1, "unit": "bunch" },
+  { "id": "ph-5",  "name": "chicken breast", "category": "meat",       "lastPurchasedDaysAgo": 9,  "purchaseIntervalDays": 10, "typicalQuantity": 2, "unit": "lbs" },
+  { "id": "ph-6",  "name": "yogurt",         "category": "dairy",      "lastPurchasedDaysAgo": 12, "purchaseIntervalDays": 7,  "typicalQuantity": 4, "unit": "cups" },
+  { "id": "ph-7",  "name": "spinach",        "category": "produce",    "lastPurchasedDaysAgo": 14, "purchaseIntervalDays": 10, "typicalQuantity": 1, "unit": "bag" },
+  { "id": "ph-8",  "name": "orange juice",   "category": "beverages",  "lastPurchasedDaysAgo": 11, "purchaseIntervalDays": 14, "typicalQuantity": 1, "unit": "carton" },
+  { "id": "ph-9",  "name": "pasta",          "category": "other",      "lastPurchasedDaysAgo": 20, "purchaseIntervalDays": 14, "typicalQuantity": 1, "unit": "box" },
+  { "id": "ph-10", "name": "butter",         "category": "dairy",      "lastPurchasedDaysAgo": 18, "purchaseIntervalDays": 14, "typicalQuantity": 1, "unit": "pack" },
+  { "id": "ph-11", "name": "coffee",         "category": "beverages",  "lastPurchasedDaysAgo": 7,  "purchaseIntervalDays": 7,  "typicalQuantity": 1, "unit": "bag" },
+  { "id": "ph-12", "name": "apples",         "category": "produce",    "lastPurchasedDaysAgo": 9,  "purchaseIntervalDays": 7,  "typicalQuantity": 6, "unit": "pieces" },
+  { "id": "ph-13", "name": "cheddar cheese", "category": "dairy",      "lastPurchasedDaysAgo": 15, "purchaseIntervalDays": 14, "typicalQuantity": 1, "unit": "block" },
+  { "id": "ph-14", "name": "toilet paper",   "category": "household",  "lastPurchasedDaysAgo": 22, "purchaseIntervalDays": 30, "typicalQuantity": 1, "unit": "pack" },
+  { "id": "ph-15", "name": "almonds",        "category": "snacks",     "lastPurchasedDaysAgo": 16, "purchaseIntervalDays": 14, "typicalQuantity": 1, "unit": "bag" },
+  { "id": "ph-16", "name": "oats",           "category": "other",      "lastPurchasedDaysAgo": 13, "purchaseIntervalDays": 14, "typicalQuantity": 1, "unit": "container" },
+  { "id": "ph-17", "name": "tomatoes",       "category": "produce",    "lastPurchasedDaysAgo": 4,  "purchaseIntervalDays": 5,  "typicalQuantity": 4, "unit": "pieces" },
+  { "id": "ph-18", "name": "dish soap",      "category": "household",  "lastPurchasedDaysAgo": 25, "purchaseIntervalDays": 30, "typicalQuantity": 1, "unit": "bottle" },
+  { "id": "ph-19", "name": "frozen pizza",   "category": "frozen",     "lastPurchasedDaysAgo": 30, "purchaseIntervalDays": 30, "typicalQuantity": 2, "unit": "boxes" },
+  { "id": "ph-20", "name": "sparkling water","category": "beverages",  "lastPurchasedDaysAgo": 8,  "purchaseIntervalDays": 7,  "typicalQuantity": 1, "unit": "case" }
+]

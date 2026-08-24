@@ -1,0 +1,153 @@
+/* ══════════════════════════════════════════════════
+   SHOPPING LIST — Minimal, clean grouped view
+══════════════════════════════════════════════════ */
+
+.shopping-list { display: flex; flex-direction: column; gap: 1.25rem; }
+
+/* ── Empty state ─────────────────────────────────── */
+.shopping-list__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  gap: 0.875rem;
+}
+
+.shopping-list__empty-icon {
+  font-size: 3rem;
+  animation: float 3.5s ease-in-out infinite;
+  opacity: 0.5;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+.shopping-list__empty-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.shopping-list__empty-sub {
+  font-size: 0.875rem;
+  color: var(--text-2);
+  line-height: 1.65;
+  max-width: 280px;
+}
+
+.shopping-list__empty-sub em {
+  color: var(--purple-light);
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* ── Category group ──────────────────────────────── */
+.shopping-list__group { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.shopping-list__group-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.25rem;
+}
+
+.shopping-list__group-emoji { font-size: 0.9375rem; }
+
+.shopping-list__group-name {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-3);
+  flex: 1;
+}
+
+.shopping-list__group-count {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--text-3);
+  background: rgba(255,255,255,0.05);
+  border-radius: 100px;
+  padding: 0.1rem 0.5rem;
+}
+
+/* Group title (h3) used in the TSX */
+.shopping-list__group-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.25rem;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-3);
+  margin-bottom: 0.375rem;
+}
+
+/* ── Items list ──────────────────────────────────── */
+.shopping-list__items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+/* ── Checked section ─────────────────────────────── */
+.shopping-list__checked-section {
+  border-top: 1px solid var(--border);
+  padding-top: 0.875rem;
+}
+
+.shopping-list__checked-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  padding: 0 0.25rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-2);
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  transition: color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.shopping-list__checked-toggle:hover { color: var(--text); }
+
+.shopping-list__checked-toggle-icon { font-size: 0.625rem; }
+
+.shopping-list__clear-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 0.75rem;
+  color: #f87171;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+
+.shopping-list__clear-btn:hover { background: rgba(239,68,68,0.12); }
+
+.shopping-list__items--checked { margin-top: 0.5rem; }
+
+/* Flex row housing the toggle + clear buttons */
+.shopping-list__checked-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}

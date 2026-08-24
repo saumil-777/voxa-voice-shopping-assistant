@@ -1,0 +1,172 @@
+/* ══════════════════════════════════════════════════
+   SHOPPING ITEM — Clean row, large touch targets
+══════════════════════════════════════════════════ */
+
+.shopping-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0.875rem;
+  background: rgba(255,255,255,0.035);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  transition:
+    opacity 0.25s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+  animation: item-in 0.32s var(--ease-spring) both;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@keyframes item-in {
+  from { opacity: 0; transform: translateY(-10px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)     scale(1); }
+}
+
+.shopping-item:hover {
+  background: rgba(255,255,255,0.055);
+  border-color: var(--border-2);
+}
+
+.shopping-item--checked {
+  opacity: 0.45;
+}
+
+.shopping-item--checked .shopping-item__name {
+  text-decoration: line-through;
+  color: var(--text-2);
+}
+
+/* ── Checkbox ────────────────────────────────────── */
+.shopping-item__check {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.18);
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green-light);
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.shopping-item__check svg { width: 11px; height: 11px; }
+
+.shopping-item__check:hover {
+  border-color: var(--green-light);
+  background: rgba(52,211,153,0.12);
+  transform: scale(1.1);
+}
+
+/* ── Info ─────────────────────────────────────────── */
+.shopping-item__info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.shopping-item__name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: -0.01em;
+}
+
+.shopping-item__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  flex-wrap: wrap;
+}
+
+.shopping-item__unit {
+  font-size: 0.75rem;
+  color: var(--text-2);
+}
+
+.shopping-item__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.625rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--badge-color);
+  background: color-mix(in srgb, var(--badge-color) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--badge-color) 22%, transparent);
+  border-radius: 100px;
+  padding: 0.15rem 0.45rem;
+}
+
+/* ── Quantity ─────────────────────────────────────── */
+.shopping-item__qty {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+
+.shopping-item__qty-btn {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+  color: var(--text);
+  font-size: 1.0625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1;
+  padding: 0;
+}
+
+.shopping-item__qty-btn:hover {
+  background: rgba(124,58,237,0.25);
+  border-color: rgba(124,58,237,0.4);
+  transform: scale(1.12);
+}
+
+.shopping-item__qty-val {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text);
+  min-width: 1.5rem;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+/* ── Remove ───────────────────────────────────────── */
+.shopping-item__remove {
+  width: 34px; height: 34px;
+  border-radius: var(--r-sm);
+  border: none;
+  background: transparent;
+  color: var(--text-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.shopping-item__remove svg { width: 15px; height: 15px; }
+
+.shopping-item__remove:hover {
+  color: #f87171;
+  background: rgba(239,68,68,0.1);
+}
