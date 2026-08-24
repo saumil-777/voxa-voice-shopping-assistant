@@ -101,18 +101,36 @@ Limitations and known items:
 
 ```mermaid
 flowchart TB
-  A[User (Voice or Text)] --> B[VoiceInput / Bottom Typed Input]
-  B --> C{If voice}
-  C -->|yes| D[Web Speech API (useVoiceRecognition)]
-  C -->|no| E[Direct transcript from input]
-  D --> F[Transcript]
-  E --> F
-  F --> G[Multilingual preprocessing]
-  G --> H[Intent & Entity Parser]
-  H --> I[Command Processor]
-  I --> J[Application state (useShoppingList)]
-  I --> K[ProductSearch]
-  J --> L[UI Components (ShoppingList / Suggestions / SubstitutePanel)]
+    A["User: Voice or Text"] --> B["Voice Input / Typed Input"]
+
+    B --> C{"Input Type"}
+    C -->|Voice| D["Web Speech API<br/>useVoiceRecognition"]
+    C -->|Text| E["Direct Text Input"]
+
+    D --> F["Transcript"]
+    E --> F
+
+    F --> G["Multilingual Preprocessing"]
+    G --> H["Intent & Entity Parser"]
+    H --> I["Command Processor"]
+
+    I --> J["Application State<br/>useShoppingList"]
+
+    J --> K["Shopping List"]
+    J --> L["Product Search"]
+    J --> M["Suggestions"]
+    J --> N["Substitutes"]
+
+    L --> O["Product Catalog"]
+    L --> P["Price & Brand Filters"]
+
+    M --> Q["Purchase History"]
+    M --> R["Seasonal Data"]
+
+    K --> S["Persistent Storage"]
+    J --> T["UI Feedback"]
+
+    T --> U["Success / Error / Loading States"]
 ```
 
 Each layer is implemented in `src/` and the application uses a shared pipeline so typed and voice commands produce consistent outcomes.
