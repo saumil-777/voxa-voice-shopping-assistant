@@ -356,13 +356,13 @@ Deployment is intended for static hosting (Vercel, Netlify, GitHub Pages). `verc
 ---
 ## Brief Write-up of Approach
 
-I approached VOXA by first breaking the problem into four core layers: voice/text input, natural-language command processing, shopping-list/product actions, and user feedback. Instead of creating separate logic for voice and typed commands, I designed both inputs to flow through the same normalization and intent-processing pipeline. This keeps the core business logic consistent and easier to extend.
+I approached VOXA by breaking the problem into four core layers: voice/text input, natural-language command processing, shopping-list/product actions, and user feedback. Instead of creating separate logic for voice and typed commands, I designed both inputs to flow through the same normalization and intent-processing pipeline, keeping the core business logic consistent and easier to extend.
 
-For voice interaction, I used the browser Speech Recognition API and built explicit listening, processing, success, and error states. Multilingual support was implemented through language-specific vocabulary, number/unit mappings, and normalization for English, Hindi/Hinglish, Tamil, Telugu, and Bengali before commands reach the common parser.
+For voice interaction, I used the browser Speech Recognition API with explicit listening, processing, success, and error states. Multilingual support was implemented through language-specific vocabulary, number/unit mappings, and normalization for English, Hindi/Hinglish, Tamil, Telugu, and Bengali before commands reach the common parser.
 
-I then built shopping-list operations around structured intents such as add, remove, update quantity, search, and substitute. Product discovery was extended with price/brand filtering and recommendations based on the available application data.
+I built shopping-list operations around structured intents such as add, remove, update quantity, search, and substitute. Product discovery was extended with price/brand filtering and recommendations using the application's available data.
 
-I treated reliability as an important part of the implementation. I tested representative voice and typed commands, multilingual inputs, search/filter flows, persistence after refresh, error states, responsive layouts, and production builds. Browser-specific Speech Recognition limitations were handled gracefully rather than masking failures with simulated responses.
+Reliability was treated as an important part of the implementation. I tested representative voice and typed commands, multilingual inputs, search/filter flows, persistence after refresh, error states, responsive layouts, and production builds. Browser-specific Speech Recognition limitations were handled gracefully rather than masking failures with simulated responses.
 
 ---
 
